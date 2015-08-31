@@ -1,0 +1,26 @@
+{
+  "files": [
+	"libs/tmlib.js",
+	"libs/bulletml.js",
+	"libs/tmlib.bulletml.js",
+	"libs/tmlib.custom.js",
+
+	"libs/outlinelabel.js",
+	"libs/soundset.js",
+	"libs/touches.js",
+	"libs/button.js",
+	"libs/mt.js",
+
+	"Benri.js",
+    "main.js",
+    "Application.js",
+    "assets.js",
+
+    "scene/CreditScene.js",
+    "scene/GameoverScene.js",
+    "scene/SettingScene.js",
+    "scene/LoadingScene.js",
+    "scene/MainScene.js",
+    "scene/TitleScene.js"
+  ]
+}
