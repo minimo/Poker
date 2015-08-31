@@ -14,7 +14,7 @@ tm.define("tmapp.SettingScene", {
 
     //ラベル用フォントパラメータ
     headerParam: {fontFamily:"CasinoRegular", align: "center", baseline:"middle", outlineWidth:2 },
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2 },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2 },
 
     init: function() {
         this.superInit();
@@ -22,7 +22,7 @@ tm.define("tmapp.SettingScene", {
         var that = this;
 
         //バックグラウンド
-        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: appMain.bgColor, strokeStyle: appMain.bgColor})
+        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: tmapp.bgColor, strokeStyle: tmapp.bgColor})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5);
 

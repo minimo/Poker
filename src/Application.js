@@ -8,6 +8,7 @@
 //namespace tmapp
 tmapp = {
     core: null,
+    bgColor: "rgba(50, 120, 50, 1)",
 };
 
 tm.define("tmapp.CanvasApp", {

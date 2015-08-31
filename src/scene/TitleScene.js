@@ -13,14 +13,12 @@ tm.define("tmapp.TitleScene", {
     labelParam: {fontFamily:"Orbitron", align: "center", baseline:"middle", outlineWidth:2, fontWeight:700 },
     scoreParam: {fontFamily:"Orbitron", align: "left", baseline:"middle", outlineWidth:2 },
 
-    bgColor: 'rgba(50, 150, 50, 1)',
-
     init: function() {
         this.superInit();
         this.background = "rgba(0, 0, 0, 0.0)";
 
         //バックグラウンド
-        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: appMain.bgColor, strokeStyle: appMain.bgColor})
+        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: tmapp.bgColor, strokeStyle: tmapp.bgColor})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5)
 

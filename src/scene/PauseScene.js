@@ -13,8 +13,8 @@ tm.define("tmapp.PauseScene", {
 
     //ラベル用フォントパラメータ
     headerParam: {fontFamily:"CasinoRegular", align: "center", baseline:"middle", outlineWidth:2 },
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2 },
-    scoreParam: {fontFamily:"Yasashisa", align: "left", baseline:"middle", outlineWidth:2 },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2 },
+    scoreParam: {fontFamily:"UbuntuMono", align: "left", baseline:"middle", outlineWidth:2 },
 
     init: function(parentScene) {
         this.superInit();
@@ -24,7 +24,7 @@ tm.define("tmapp.PauseScene", {
         this.dialog = tmapp.ConfirmDialog("EXIT GAME?", ["YES", "NO"]);
 
         //バックグラウンド
-        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: appMain.bgColor, strokeStyle: appMain.bgColor})
+        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: tmapp.bgColor, strokeStyle: tmapp.bgColor})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5);
 
@@ -85,7 +85,7 @@ tm.define("tmapp.ConfirmDialog", {
     answer: null,
 
     //ラベル用フォントパラメータ
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:3 },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:3 },
 
     init: function(caption, button, fontSize) {
         this.superInit();
@@ -94,7 +94,7 @@ tm.define("tmapp.ConfirmDialog", {
         fontSize = fontSize || 50;
 
         //バックグラウンド
-        tm.display.RoundRectangleShape({width: SC_W-20, height: SC_H*0.3, fillStyle: appMain.bgColor, lineWidth: 4})
+        tm.display.RoundRectangleShape({width: SC_W-20, height: SC_H*0.3, fillStyle: tmapp.bgColor, lineWidth: 4})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5);
 
@@ -152,14 +152,14 @@ tm.define("tmapp.AlertDialog", {
     superClass: tm.app.Scene,
 
     //ラベル用フォントパラメータ
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2 },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2 },
 
     init: function(param) {
         this.superInit();
         param = {}.$extend(DEFALT_ALERTPARAM, param);
 
         //バックグラウンド
-        tm.display.RoundRectangleShape({width: SC_W-20, height: param.height, fillStyle: appMain.bgColor, lineWidth: 4})
+        tm.display.RoundRectangleShape({width: SC_W-20, height: param.height, fillStyle: tmapp.bgColor, lineWidth: 4})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5);
 

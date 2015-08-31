@@ -29,14 +29,14 @@ tm.define("tmapp.MainScene", {
     exitGame: false,
 
     //ラベル用パラメータ
-    labelParamBasic: {fontFamily: "Yasashisa", align: "left", baseline: "middle",outlineWidth: 3, fontWeight:700},
+    labelParamBasic: {fontFamily: "UbuntuMono", align: "left", baseline: "middle",outlineWidth: 3, fontWeight:700},
 
     init: function(mode, retry) {
         this.superInit();
         this.background = "rgba(0, 0, 0, 0.0)";
 
         //バックグラウンド
-        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: appMain.bgColor, strokeStyle: appMain.bgColor})
+        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: tmapp.bgColor, strokeStyle: tmapp.bgColor})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5)
 
@@ -47,6 +47,9 @@ tm.define("tmapp.MainScene", {
         this.lowerLayer = tm.app.Object2D().addChildTo(this);
         this.mainLayer = tm.app.Object2D().addChildTo(this);
         this.upperLayer = tm.app.Object2D().addChildTo(this);
+
+        //カード管理
+        this.deck = tmapp.CardDeck(true).addChild(this.mainLayer);
 
         //スコア表示
         var that = this;
@@ -83,6 +86,13 @@ tm.define("tmapp.MainScene", {
     update: function() {
     },
 
+    dealCards: function() {
+        for (var i = 0; i< 5; i++) {
+            var c = this.deck.deal();
+            this.deck.addHand(c);
+        }
+    },
+
     //ゲームオーバー
     gameover: function() {
     },
@@ -94,6 +104,7 @@ tm.define("tmapp.MainScene", {
     },
 
     ontouchesend: function(e) {
+        this.dealCards();
     },
 });
 

@@ -9,9 +9,9 @@ assets = [];
 
 assets["main"] = {
     //Sprite
-    "trump":        "assets/trump.png",
+    "card":         "assets/trump.png",
 
     //Font
     "UbuntuMono":   "font/UbuntuMono-Bold.ttf",
-    "Orbitron":     "font/Orbitron-Regular.ttf",
+    "CasinoRegular":"font/CasinoRegular.ttf",
 }

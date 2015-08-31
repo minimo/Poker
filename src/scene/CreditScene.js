@@ -11,7 +11,7 @@ tm.define("tmapp.CreditScene", {
 
     //クレジットラベル用パラメータ
     headerParam: {fontFamily:"CasinoRegular", align: "center", baseline:"middle", outlineWidth:2 },
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2 },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2 },
 
     init: function() {
         this.superInit();
@@ -21,7 +21,7 @@ tm.define("tmapp.CreditScene", {
         var sizeURL = 25;
 
         //バックグラウンド
-        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: appMain.bgColor, strokeStyle: appMain.bgColor})
+        this.bg = tm.display.RectangleShape({width: SC_W, height: SC_H, fillStyle: tmapp.bgColor, strokeStyle: tmapp.bgColor})
             .addChildTo(this)
             .setPosition(SC_W*0.5, SC_H*0.5);
         

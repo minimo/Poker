@@ -16,9 +16,9 @@ tm.define("tmapp.GameoverScene", {
 
     //ラベル用フォントパラメータ
     headerParam: {fontFamily:"CasinoRegular", align: "center", baseline:"middle", outlineWidth:2 },
-    labelParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2 },
-    scoreParam: {fontFamily:"Yasashisa", align: "left", baseline:"middle", outlineWidth:2 },
-    extendParam: {fontFamily:"Yasashisa", align: "center", baseline:"middle", outlineWidth:2, fillStyle: "red" },
+    labelParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2 },
+    scoreParam: {fontFamily:"UbuntuMono", align: "left", baseline:"middle", outlineWidth:2 },
+    extendParam: {fontFamily:"UbuntuMono", align: "center", baseline:"middle", outlineWidth:2, fillStyle: "red" },
 
     init: function(parentScene) {
         this.superInit();
