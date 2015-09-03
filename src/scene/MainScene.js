@@ -49,7 +49,7 @@ tm.define("tmapp.MainScene", {
         this.upperLayer = tm.app.Object2D().addChildTo(this);
 
         //カード管理
-        this.deck = tmapp.CardDeck(true).addChild(this.mainLayer);
+        this.deck = tmapp.CardDeck().addChildTo(this);
 
         //スコア表示
         var that = this;
@@ -89,7 +89,8 @@ tm.define("tmapp.MainScene", {
     dealCards: function() {
         for (var i = 0; i< 5; i++) {
             var c = this.deck.deal();
-            this.deck.addHand(c);
+            c.tweener.clear()
+                .to({x: SC_W*0.1*i, y: SC_H*0.8}, 500);
         }
     },
 
